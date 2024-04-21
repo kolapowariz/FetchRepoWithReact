@@ -1,0 +1,40 @@
+
+.container{
+    margin-top: 0;
+    padding: 20px;
+}
+/* .repos{
+} */
+.repos h1{
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+}
+.element{
+    margin-top: 30px;
+}
+.element input{
+    width: 80%;
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-decoration: none;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+}
+.link:hover{
+    color: #666;
+}
+li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}

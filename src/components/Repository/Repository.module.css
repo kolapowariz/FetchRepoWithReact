@@ -1,0 +1,18 @@
+/* Repository.module.css */
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
