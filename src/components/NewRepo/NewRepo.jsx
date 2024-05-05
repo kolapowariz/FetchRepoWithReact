@@ -33,34 +33,34 @@ function NewRepo() {
 
   return (
     <>
-      <Button className={`${styles.button}`} colorScheme="teal" onClick={() => setIsOpen(true)} leftIcon={<AddIcon />}>Create New Repo</Button>
+      <Button className={`${styles.button}`} onClick={() => setIsOpen(true)} leftIcon={<AddIcon />}>Create New Repo</Button>
 
       <div className={`${styles.cont}`}>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} className={`${styles.modal}`} >
-        <ModalOverlay />
-        <ModalContent bg="blue.50">
-          <ModalHeader className={`${styles["modal-header"]}`}>Create New Repo</ModalHeader>
-          {/* <ModalCloseButton /> */}
-          <ModalBody bg='gray.200' className={`${styles["modal-body"]}`}>
-            <FormControl className={`${styles["form-control"]}`}>
-              <FormLabel color='blue.700' className={`${styles["form-label"]}`}>Name</FormLabel>
-              <Input className={`${styles["input"]}`} name="name" value={newRepo.name} onChange={handleInputChange} bg='white' color='black' />
-            </FormControl>
-            <FormControl mt={4}>
-              <FormLabel className={`${styles["form-label"]}`} color='blue.700'>Description</FormLabel>
-              <Textarea className={`${styles.textarea}`} name="description" value={newRepo.description} onChange={handleInputChange} bg='white' color='black' />
-            </FormControl>
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={handleCreateRepo} rightIcon={<AddIcon />}>
-              Create
-            </Button>
-            <Button variant="ghost" onClick={() => setIsOpen(false)} rightIcon={<CloseIcon />}>
-              Cancel
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} className={`${styles.modal}`} >
+          <ModalOverlay />
+          <ModalContent bg="blue.50">
+            <ModalHeader className={`${styles["modal-header"]}`}>Create New Repo</ModalHeader>
+            {/* <ModalCloseButton /> */}
+            <ModalBody bg='gray.200' className={`${styles["modal-body"]}`}>
+              <FormControl className={`${styles["form-control"]}`}>
+                <FormLabel color='blue.700' className={`${styles["form-label"]}`}>Name</FormLabel>
+                <Input className={`${styles["input"]}`} name="name" value={newRepo.name} onChange={handleInputChange} bg='white' color='black' />
+              </FormControl>
+              <FormControl mt={4}>
+                <FormLabel className={`${styles["form-label"]}`} color='blue.700'>Description</FormLabel>
+                <Textarea className={`${styles.textarea}`} name="description" value={newRepo.description} onChange={handleInputChange} bg='white' color='black' />
+              </FormControl>
+            </ModalBody>
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={handleCreateRepo} rightIcon={<AddIcon />}>
+                Create
+              </Button>
+              <Button variant="ghost" onClick={() => setIsOpen(false)} rightIcon={<CloseIcon />}>
+                Cancel
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </div>
 
       {repos.map((repo, index) => (

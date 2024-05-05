@@ -1,18 +1,25 @@
 /* NewRepo.module.css */
-.container {
+.cont {
   padding: 20px;
-  width: 100%;
+  width: 200px;
   height: auto;
-  background-color: red;
 }
 
-.button {
-  margin-bottom: 20px;
-  color: yellow;
+.button{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: aliceblue;
+  margin: 20px;
+  width: 250px;
 }
-.cont{
-  background-color: red;
-}
+
 
 .modal {
   background-color: #f0f4f8;
