@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
-import { useParams } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as  Link } from 'react-router-dom';
 import styles from './Repositories.module.css';
 import NewRepo from '../NewRepo/NewRepo';
 

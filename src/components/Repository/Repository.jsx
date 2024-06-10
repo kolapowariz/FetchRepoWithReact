@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ReactDOM from 'react-dom/client';
 import styles from './Repository.module.css';
 
 
