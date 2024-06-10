@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Repositories.module.css';
 import NewRepo from '../NewRepo/NewRepo';
 
@@ -11,16 +11,10 @@ function Repositories() {
   const itemPerPage = 10;
 
   useEffect(() => {
-    //     fetch(`https://api.github.com/users/kolapowariz/repos?page=${page}&per_page=${itemPerPage}`, {
-    //   headers: {
-    //     'Authorization': `token ${your_token}`
-    //   }
-    // })
     fetch(`https://api.github.com/users/kolapowariz/repos?page=${page}&per_page=${itemPerPage}`)
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data)) {
-
           setRepos(data)
           if (data.length < itemPerPage) {
             setLastPage(true)
