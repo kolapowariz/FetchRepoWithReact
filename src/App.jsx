@@ -12,7 +12,7 @@ function App() {
       <ErrorBoundaries>
         <Routes>
           <Route path="/" element={<Repositories />} />
-          <Route path="/repos/:repoName" element={<Repository />} />
+          <Route path="/rep/:repoName" element={<Repository />} />
           <Route path="*" element={<NotFoundError />} />
         </Routes>
       </ErrorBoundaries>

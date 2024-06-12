@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from './Repository.module.css';
+import { useContext } from "react";
+import { DataContext } from "../Data";
 
 
 function Repository() {
 
   const { repoName } = useParams();
-  const [repo, setRepo] = useState(null);
+  const [repo, setRepo] = useState();
+  const context = useContext(DataContext)
+
+
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/kolapowariz/${repoName}`)
-      .then((response) => response.json())
-      .then((data) => setRepo(data))
-      .catch((error) => console.error(error));
-  }, [repoName]);
+    const repository = context.find(r => r.name === repoName)
+    setRepo(repository)
+  }, [context, repoName])
 
   if (!repo) {
     return <h1>Loading...</h1>;
